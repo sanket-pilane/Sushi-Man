@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shushii_restarount_app/constants.dart';
-import 'package:shushii_restarount_app/screens/home/model/sushi_data.dart';
+
+import 'package:shushii_restarount_app/src/features/home/model/sushi_data.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});

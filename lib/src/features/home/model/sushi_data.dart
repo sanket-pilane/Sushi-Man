@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shushii_restarount_app/constants.dart';
-import 'package:shushii_restarount_app/screens/home/model/ingrediants.dart';
-import 'package:shushii_restarount_app/screens/home/model/sushi.dart';
+import 'package:shushii_restarount_app/src/features/home/model/ingrediants.dart';
+import 'package:shushii_restarount_app/src/features/home/model/sushi.dart';
 
 class SushiData extends ChangeNotifier {
   int increment = 1;

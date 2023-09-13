@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shushii_restarount_app/screens/home/model/categories_data.dart';
-import 'package:shushii_restarount_app/screens/home/model/sushi_data.dart';
-import 'package:shushii_restarount_app/screens/landing_page/landing_page.dart';
+import 'package:shushii_restarount_app/src/features/home/model/categories_data.dart';
+import 'package:shushii_restarount_app/src/features/home/model/sushi_data.dart';
+import 'package:shushii_restarount_app/src/features/landing_page/landing_page.dart';
 
 void main() {
   runApp(const MyApp());

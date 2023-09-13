@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shushii_restarount_app/screens/home/model/categories.dart';
-import 'package:shushii_restarount_app/screens/home/model/categories_data.dart';
+import 'package:shushii_restarount_app/src/features/home/model/categories_data.dart';
+
+import '../model/categories.dart';
 
 class CategoriesList extends StatefulWidget {
   const CategoriesList({super.key});

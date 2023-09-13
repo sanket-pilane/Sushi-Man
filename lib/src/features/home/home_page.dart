@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'package:shushii_restarount_app/screens/home/componets/categories_list.dart';
-
-import 'package:shushii_restarount_app/screens/home/componets/custome_search_bar.dart';
-import 'package:shushii_restarount_app/screens/home/componets/popular_foods.dart';
-import 'package:shushii_restarount_app/screens/home/componets/promo_card.dart';
-import 'package:shushii_restarount_app/screens/home/componets/sushi_tile.dart';
-import 'package:shushii_restarount_app/screens/home/model/categories_data.dart';
+import 'package:shushii_restarount_app/src/features/home/componets/categories_list.dart';
+import 'package:shushii_restarount_app/src/features/home/componets/custome_search_bar.dart';
+import 'package:shushii_restarount_app/src/features/home/componets/popular_foods.dart';
+import 'package:shushii_restarount_app/src/features/home/componets/promo_card.dart';
+import 'package:shushii_restarount_app/src/features/home/componets/sushi_tile.dart';
+import 'package:shushii_restarount_app/src/features/home/model/categories_data.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
