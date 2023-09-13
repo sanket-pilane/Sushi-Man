@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
-import 'package:shushii_restarount_app/constants.dart';
+
+import 'package:shushii_restarount_app/src/constants/constants.dart';
 import 'package:shushii_restarount_app/src/features/cart/cart_page.dart';
 import 'package:shushii_restarount_app/src/features/home/home_page.dart';
 

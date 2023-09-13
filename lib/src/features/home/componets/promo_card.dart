@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shushii_restarount_app/constants.dart';
+import 'package:shushii_restarount_app/src/constants/constants.dart';
 
 class PromoCard extends StatelessWidget {
   const PromoCard({super.key});

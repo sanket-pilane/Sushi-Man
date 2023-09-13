@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shushii_restarount_app/src/features/auth/screens/login_page.dart';
 import 'package:shushii_restarount_app/src/features/home/model/categories_data.dart';
 import 'package:shushii_restarount_app/src/features/home/model/sushi_data.dart';
 import 'package:shushii_restarount_app/src/features/landing_page/landing_page.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: "sushi shop",
         theme: ThemeData(),
-        home: LandingPage(),
+        home: LoginPage(),
       ),
     );
   }

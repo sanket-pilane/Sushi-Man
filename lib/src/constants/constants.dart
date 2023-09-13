@@ -34,3 +34,11 @@ const kToroImage = "assets/images/ingrediants/toro.png";
 
 // colors
 Color kPrimaryColor = Color.fromARGB(255, 163, 63, 55);
+
+// backgroud
+const kBg1Image = "assets/images/bg/bg1.jpg";
+const kBg2Image = "assets/images/bg/bg2.jpg";
+
+// auth
+const kGoogleImage = "assets/images/auth/google_logo.png";
+const kFbImage = "assets/images/auth/fb_logo.png";
