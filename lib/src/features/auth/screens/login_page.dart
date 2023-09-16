@@ -1,7 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shushii_restarount_app/src/constants/constants.dart';
 import 'package:shushii_restarount_app/src/features/auth/components/divider.dart';
 import 'package:shushii_restarount_app/src/features/auth/components/square_tile.dart';
+import 'package:shushii_restarount_app/src/features/auth/screens/sign_up.dart';
+import 'package:shushii_restarount_app/src/services/firebase_auth_methods.dart';
 import 'package:shushii_restarount_app/src/widgets/custome_textfielad.dart';
 import 'package:shushii_restarount_app/src/widgets/frosted_glass.dart';
 import 'package:shushii_restarount_app/src/widgets/snackbar.dart';
@@ -24,6 +27,13 @@ class _LoginPageState extends State<LoginPage> {
     passwordController.dispose();
   }
 
+  void signUpUser() async {
+    FirebaseAuthMethod(FirebaseAuth.instance).signInWithEmailAndPassword(
+        email: usernameController.text,
+        password: passwordController.text,
+        context: context);
+  }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -34,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
         decoration: BoxDecoration(
           // color: kPrimaryColor,
           image: DecorationImage(
-            image: AssetImage(kBg2Image),
+            image: AssetImage(kBgImage),
             fit: BoxFit.cover,
           ),
         ),
@@ -56,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
         ),
         Icon(
           Icons.lock,
-          color: Colors.white,
+          color: Colors.black,
           size: 60,
         ),
         CustomeTextField(
@@ -74,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
           height: 20,
         ),
         GestureDetector(
-          onTap: () => showSnackBar(context, usernameController.text),
+          onTap: () => signUpUser(),
           child: Container(
             width: width * 0.7,
             padding: EdgeInsets.symmetric(vertical: 15),
@@ -119,7 +129,7 @@ class _LoginPageState extends State<LoginPage> {
               Text(
                 "Don't have an Acount?",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 16,
                 ),
               ),
@@ -127,7 +137,10 @@ class _LoginPageState extends State<LoginPage> {
                 width: 5,
               ),
               GestureDetector(
-                onTap: () => showSnackBar(context, "Register Here"),
+                onTap: () =>
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => SignUpPage(),
+                )),
                 child: Text(
                   "Register Here",
                   style: TextStyle(

@@ -15,7 +15,7 @@ class CustomeTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
+      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
       child: TextField(
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
@@ -28,11 +28,10 @@ class CustomeTextField extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(30)),
           prefixIcon: icon,
-          prefixIconColor: Colors.white,
+          prefixIconColor: Colors.black,
           label: Text(hintText),
-          labelStyle: TextStyle(
-            color: Colors.white,
-          ),
+          labelStyle:
+              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         obscureText: obscureText,
         controller: controller,

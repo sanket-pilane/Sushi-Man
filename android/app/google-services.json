@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "662837939593",
+    "project_id": "sushi-man-66bef",
+    "storage_bucket": "sushi-man-66bef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662837939593:android:7fe8c3a6e73f994b63e558",
+        "android_client_info": {
+          "package_name": "com.example.shushii_restarount_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEEyNF8DIySrVcApnDIvNuI1IwGB8yZDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

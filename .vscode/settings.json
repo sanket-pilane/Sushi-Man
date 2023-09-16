@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "D:/Flutter/shushii_restarount_app/linux"
+    "cmake.sourceDirectory": "D:/Flutter/shushii_restarount_app/linux",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

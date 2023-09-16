@@ -38,6 +38,7 @@ Color kPrimaryColor = Color.fromARGB(255, 163, 63, 55);
 // backgroud
 const kBg1Image = "assets/images/bg/bg1.jpg";
 const kBg2Image = "assets/images/bg/bg2.jpg";
+const kBgImage = "assets/images/bg/bg.jpg";
 
 // auth
 const kGoogleImage = "assets/images/auth/google_logo.png";
