@@ -31,10 +31,16 @@ class _SignUpPageState extends State<SignUpPage> {
 
   void signUpUser() async {
     if (passwordController.text == confirmPasswordController.text) {
-      FirebaseAuthMethod(FirebaseAuth.instance).signUpUsingEmailPassword(
+      await FirebaseAuthMethod(FirebaseAuth.instance).signUpUsingEmailPassword(
           email: usernameController.text,
           password: passwordController.text,
           context: context);
+
+      await FirebaseAuthMethod(FirebaseAuth.instance)
+          .signInWithEmailAndPassword(
+              email: usernameController.text,
+              password: passwordController.text,
+              context: context);
     } else {
       showSnackBar(context, "Confirm password and password must be same");
     }

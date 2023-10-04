@@ -40,4 +40,8 @@ class FirebaseAuthMethod {
       showSnackBar(context, e.message!);
     }
   }
+
+  void signOut(BuildContext context) {
+    _auth.signOut();
+  }
 }

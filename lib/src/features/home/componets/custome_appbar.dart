@@ -1,9 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomeAppBa extends StatelessWidget {
   final IconData leading;
-
   final String trainling;
   const CustomeAppBa({
     super.key,
@@ -11,14 +11,18 @@ class CustomeAppBa extends StatelessWidget {
     required this.trainling,
   });
 
+  void signOut() {
+    FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Icon(
-          leading,
-          size: 30,
+        IconButton(
+          icon: Icon(leading),
+          onPressed: () => signOut,
         ),
         Row(
           children: [
@@ -36,10 +40,10 @@ class CustomeAppBa extends StatelessWidget {
             ),
           ],
         ),
-        Image.asset(
-          trainling,
-          height: 40,
-        ),
+        // Image.asset(
+        //   trainling,
+        //   height: 40,
+        // ),
       ],
     );
   }
