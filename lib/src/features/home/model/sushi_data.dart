@@ -6,6 +6,8 @@ import 'package:shushii_restarount_app/src/features/home/model/sushi.dart';
 class SushiData extends ChangeNotifier {
   int increment = 1;
   int total = 0;
+  bool isLiked = false;
+  List<Sushi> favourite = [];
 
   List<Sushi> sushi = [
     Sushi(
@@ -70,5 +72,11 @@ class SushiData extends ChangeNotifier {
       cartTotal = 0;
     }
     return cartTotal.toString();
+  }
+
+  void addToFavourite(Sushi eachSushi) {
+    isLiked = !isLiked;
+    favourite.add(eachSushi);
+    notifyListeners();
   }
 }

@@ -8,7 +8,7 @@ import 'package:shushii_restarount_app/src/features/home/model/sushi_data.dart';
 import 'package:shushii_restarount_app/src/features/landing_page/componets/my_button.dart';
 
 // ignore: must_be_immutable
-class DetailScreen extends StatelessWidget {
+class DetailScreen extends StatefulWidget {
   Sushi eachSushi;
 
   DetailScreen({
@@ -16,6 +16,11 @@ class DetailScreen extends StatelessWidget {
     required this.eachSushi,
   });
 
+  @override
+  State<DetailScreen> createState() => _DetailScreenState();
+}
+
+class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,22 +44,32 @@ class DetailScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               GestureDetector(
-                                onTap: () => Navigator.pop(context),
+                                onTap: () {
+                                  value.isLiked = false;
+                                  Navigator.pop(context);
+                                },
                                 child: Icon(
                                   Icons.arrow_back,
                                   size: 30,
                                 ),
                               ),
-                              Image.asset(
-                                kLikeImage,
-                                height: 30,
+                              GestureDetector(
+                                onTap: () {
+                                  value.addToFavourite(widget.eachSushi);
+                                  setState(() {});
+                                },
+                                child: Image.asset(
+                                    value.isLiked
+                                        ? kLikeFilledImage
+                                        : kLikeImage,
+                                    height: 30),
                               ),
                             ],
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 30),
                             child: Image.asset(
-                              eachSushi.imagePath,
+                              widget.eachSushi.imagePath,
                               height: 230,
                             ),
                           ),
@@ -66,7 +81,7 @@ class DetailScreen extends StatelessWidget {
                                 size: 40,
                               ),
                               Text(
-                                eachSushi.rating.toString(),
+                                widget.eachSushi.rating.toString(),
                                 style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
@@ -75,7 +90,7 @@ class DetailScreen extends StatelessWidget {
                             ],
                           ),
                           Text(
-                            eachSushi.name,
+                            widget.eachSushi.name,
                             style: GoogleFonts.raleway(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -133,7 +148,7 @@ class DetailScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "\$ ${eachSushi.price * value.increment}",
+                          "\$ ${widget.eachSushi.price * value.increment}",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
@@ -171,7 +186,7 @@ class DetailScreen extends StatelessWidget {
                     MyButton(
                       title: "Add to Cart",
                       onTap: () {
-                        value.addToCart(eachSushi);
+                        value.addToCart(widget.eachSushi);
                       },
                     )
                   ],
