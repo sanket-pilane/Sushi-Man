@@ -4,7 +4,7 @@
 
 
 ## Introduction
-changes 
+
 Sushi-Man is a delightful Flutter app inspired by a design from Dribbble. It brings the world of sushi right to your fingertips. This app combines the power of Flutter for the frontend and Firebase for authentication and backend services. Satisfy your sushi cravings and enjoy a seamless user experience with Sushi-Man.
 
 ## Project Preview
